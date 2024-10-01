@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatCar Personality Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logoContainer">
+        <a href="./"><img src="images/logo.png" alt="logo" class="logo" /></a>
+      </div>
+
+      <div class="inner-container">
+        <header>
+          <!-- <h1>WhatCar</h1> -->
+          <div id="intro-desc">
+            <h2>Start Your Engines…</h2>
+            <p>
+              In the fast-paced world of recruitment and relationships,
+              understanding someone’s personality can be as essential as
+              checking under the hood of a high-performance car. Inspired by
+              Carl Jung’s research into psychological types, we have created a
+              new spin on personality profiling, one that blends Jung’s deep
+              insights with a modern new approach called (CAR) Characteristics,
+              Attitude, and Results.
+            </p>
+            <p>
+              Imagine human personality as the engine that powers everything we
+              do, with each person reflecting a different model of thinking,
+              feeling, and acting. And just like with cars, you can tell a lot
+              about someone by the way they drive through life. The CAR
+              framework is rooted in Jung’s work, and applies to human
+              personalities, with each personality type symbolized by an iconic
+              vehicle. Because at the end of the day, we’re all navigating the
+              twists and turns of life in our unique way.
+            </p>
+          </div>
+          <button id="start-button">Start Quiz</button>
+        </header>
+        <!-- Quiz Container -->
+        <main id="quiz-container" style="display: none">
+          <!-- Questions will be dynamically inserted here -->
+        </main>
+        <!-- Result Container -->
+        <div id="result-container" style="display: none">
+          <h2>Here are your car keys...</h2>
+          <p id="result-text"></p>
+          <a href="https://www.just-hire.co" target="_blank"><button id="restart-button">
+            Learn more
+          </button>
+        </a>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          &copy; 2024
+          <a href="https://whatcar.me/" target="_blank" class="links"
+            >WhatCar.me</a
+          >. All rights reserved.
+          <a href="./terms.html" class="links">Terms</a>
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
