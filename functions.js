@@ -8,6 +8,7 @@ export function getRandomWords() {
   for (const category in words) {
     const randomIndex = Math.floor(Math.random() * words[category].length);
     selectedWords.push({ category, word: words[category][randomIndex] });
+    words[category].splice(randomIndex, 1);
   }
 
   return selectedWords;
@@ -46,7 +47,6 @@ function showResults(scores, userAnswers) {
   userAnswers.push(highestCategory.replace("+", ""));
   console.log("\nThe highest score is in category:", highestCategory);
 }
-
 
 export function getRanks(scores, userAnswers) {
   showResults(scores, userAnswers);

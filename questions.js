@@ -3,9 +3,9 @@ export const quizData = [
     question: "Where would you rather be?",
     images: ["images/Option1.png", "images/Option2.png", "images/Option3.png"],
     answers: [
-      { text: "Option 1", value: "A" },
-      { text: "Option 2", value: "B" },
-      { text: "Option 3", value: "C" },
+      { text: "Option 1", value: "Option1" },
+      { text: "Option 2", value: "Option2" },
+      { text: "Option 3", value: null },
     ],
   },
 
@@ -27,25 +27,24 @@ export const quizData = [
       },
       {
         text: "Both A & B",
-        value: "",
+        value: null,
       },
       {
         text: "None of the above",
-        value: "",
+        value: null,
       },
     ],
   },
 
   {
     question: "Rank these words in most to least like you?",
-    value: "B",
   },
   {
     question: "Which better describes you…",
     images: ["images/image5.png"],
     answers: [
-      { text: "I usually think before I speak.", value: "A" },
-      { text: "I usually speak and think at the same time.", value: "B" },
+      { text: "I usually think before I speak.", value: "I" },
+      { text: "I usually speak and think at the same time.", value: "E" },
     ],
   },
 ];

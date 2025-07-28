@@ -5,6 +5,7 @@ import {
   rankWords,
 } from "./functions.js";
 import { quizData, scenarios } from "./questions.js";
+import { displayResult } from "./result.js";
 
 let currentQuestion = 0;
 let userAnswers = [];
@@ -143,11 +144,11 @@ function showQuestion() {
       button.className = "answer";
       button.innerText = answer.text;
       button.onclick = () => {
-        if (currentQuestion == 1) {
-          userAnswers.push(randomIndex + 1);
-        } else {
-          userAnswers.push(answer.value);
-        }
+        // if (currentQuestion == 1) {
+        //   userAnswers.push(randomIndex + 1);
+        // } else {
+        // }
+        userAnswers.push(answer.value);
         currentQuestion++;
         showQuestion();
       };
@@ -166,7 +167,10 @@ function calculateResult() {
   quizContainer.style.display = "none";
   resultContainer.style.display = "block";
 
-  const { car, description } = determinePersonality(userAnswers);
+  console.log("userAnswers:::", userAnswers);
+
+  // const { car, description } = determinePersonality(userAnswers);
+  const { car, description } = displayResult(userAnswers);
 
   // Display the result (assuming there's an element to show the car result)
   const resultText = document.getElementById("result-text");
